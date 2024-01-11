@@ -11,6 +11,7 @@ def NewPelicula(peli):
     peliculas[id] = peli
     cf.AddData(id, peli)
 
+
 def valFilePelicula():
     if(cf.checkFile()):
         print('OK')
@@ -35,3 +36,4 @@ def agregarPelicula():
             pelicula[key] = idsum
     NewPelicula(pelicula)
     print(f'Pelicula {pelicula['nombre']} agregada correctamente')
+    os.system('pause')
