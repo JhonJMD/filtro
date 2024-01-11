@@ -111,11 +111,11 @@ def menuGestorInformes():
 
 def menuGestorPeliculas():
     p.cf.checkFile(p.peliculas)
-    os.system('cls')
-    t.headerGestorPeliculas()
     opciones = ['Agregar Pelicula', 'Editar Pelicula', 'Eliminar Pelicula', 'Eliminar Actor', 'Buscar Pelicula', 'Listar todas las Peliculas', 'Ir Menu principal']
     isActivePel = True
     while isActivePel:
+        os.system('cls')
+        t.headerGestorPeliculas()
         for i, item in enumerate(opciones):
             print(f'{i+1}. {item}')
         try:
