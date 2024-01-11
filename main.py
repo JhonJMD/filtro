@@ -1,16 +1,11 @@
-import ui.titles as t
 import ui.menus as m
 import os
-
-opciones = ['Administrador de Generos','Administrador de Actores', 'Administrador de Formatos', 'Gestor de Informes','Gestor de Peliculas','Salir']
 
 if __name__ == '__main__':
     isActive = True
     while isActive:
         os.system('cls')
-        t.headerPrincipal()
-        for i, item in enumerate(opciones):
-            print(f'{i+1}. {item}')
+        m.menuPrincipal()
         try:
             opMenu = int(input(': '))
         except ValueError:
@@ -28,6 +23,7 @@ if __name__ == '__main__':
             elif opMenu == 5:
                 m.menuGestorPeliculas()
             elif opMenu == 6:
+                os.system('cls')
                 print ('Gracias por utilizar nuestro sistema......Vuelva Pronto!')
                 os.system('pause')
                 isActive = False

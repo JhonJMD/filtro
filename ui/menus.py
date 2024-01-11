@@ -1,11 +1,16 @@
 import ui.titles as t
-import funciones.generos as fg
-import funciones.actores as fa 
-import funciones.peliculas as fp 
-import funciones.formatos as ff 
-import funciones.informes as fi 
+import funciones.generos as g
+import funciones.actores as a 
+import funciones.peliculas as p 
+import funciones.formatos as f 
+import funciones.informes as fi
 import os
-
+def menuPrincipal():
+    t.headerPrincipal()
+    opciones = ['Administrador de Generos','Administrador de Actores', 'Administrador de Formatos', 'Gestor de Informes','Gestor de Peliculas','Salir']
+    for i, item in enumerate(opciones):
+        print(f'{i+1}. {item}')
+        
 def menuAdminGeneros():
     os.system('cls')
     t.headerAdminGeneros()
@@ -21,9 +26,9 @@ def menuAdminGeneros():
             os.system('pause')
         else:
             if opMenu == 1:
-                crearGenero()
+                g.crearGenero()
             elif opMenu == 2:
-                listarGenero()
+                g.listarGenero()
             elif opMenu == 3:
                 isActiveGen = False
             else:
@@ -45,9 +50,9 @@ def menuAdminActores():
             os.system('pause')
         else:
             if opMenu == 1:
-                crearActor()
+                a.crearActor()
             elif opMenu == 2:
-                listarActor()
+                a.listarActor()
             elif opMenu == 3:
                 isActiveAct = False
             else:
@@ -69,9 +74,9 @@ def menuAdminFormatos():
             os.system('pause')
         else:
             if opMenu == 1:
-                crearFormato()
+                f.crearFormato()
             elif opMenu == 2:
-                listarFormato()
+                f.listarFormato()
             elif opMenu == 3:
                 isActiveForm = False
             else:
@@ -93,11 +98,11 @@ def menuGestorInformes():
             os.system('pause')
         else:
             if opMenu == 1:
-                listGenero()
+                fi.listGenero()
             elif opMenu == 2:
-                listSS()
+                fi.listSS()
             elif opMenu == 3:
-                buscarPelicula()
+                fi.buscarPelicula()
             elif opMenu == 4:
                 isActiveInf = False
             else:
@@ -105,6 +110,7 @@ def menuGestorInformes():
                 os.system('pause')
 
 def menuGestorPeliculas():
+    p.cf.checkFile(p.peliculas)
     os.system('cls')
     t.headerGestorPeliculas()
     opciones = ['Agregar Pelicula', 'Editar Pelicula', 'Eliminar Pelicula', 'Eliminar Actor', 'Buscar Pelicula', 'Listar todas las Peliculas', 'Ir Menu principal']
@@ -119,17 +125,17 @@ def menuGestorPeliculas():
             os.system('pause')
         else:
             if opMenu == 1:
-                agregarPelicula()
+                p.agregarPelicula()
             elif opMenu == 2:
-                editarPelicula()
+                p.editarPelicula()
             elif opMenu == 3:
-                eliminarPelicula()
+                p.eliminarPelicula()
             elif opMenu == 4:
-                eliminarActor()
+                p.eliminarActor()
             elif opMenu == 5:
-                buscarPelicula()
+                p.buscarPelicula()
             elif opMenu == 6:
-                listarPeliculas()
+                p.listarPeliculas()
             elif opMenu == 7:
                 isActivePel = False
             else:

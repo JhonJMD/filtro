@@ -27,4 +27,4 @@ def checkFile(*param):
 
 def readFile():
     with open(MY_DATABASE, 'r') as rf:
-        return json.loads(rf)
+        return json.load(rf)
