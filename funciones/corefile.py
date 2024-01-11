@@ -8,13 +8,13 @@ def NewFile(*param):
 def AddData(*param):
     with open(MY_DATABASE, 'r+') as rwf:
         data_file = json.load(rwf)
-    if(len(param) > 1):
-        data_file.update({param[0]:param[1]})
-    else:
-        data_file.update({param[0]})
-    rwf.seek(0)
-    json.dump(data_file,rwf,indent=4)
-    rwf.close()
+        if(len(param) > 1):
+            data_file.update({param[0]:param[1]})
+        else:
+            data_file.update({param[0]})
+        rwf.seek(0)
+        json.dump(data_file,rwf,indent=4)
+        rwf.close()
 
 def checkFile(*param):
     data = list(param)
