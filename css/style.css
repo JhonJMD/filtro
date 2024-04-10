@@ -65,9 +65,14 @@ body{
 .background-three{
     position: absolute;
     right: 8vw;
+    transition: 0.3s;
     img{
         width: 22vw;
     }
+}
+
+.background-three:hover{
+    transform: scale(1.1);
 }
 
 .stat{
@@ -154,3 +159,155 @@ body{
     }
 }
 
+@media(max-width:1580px){
+    .background-one img{
+        width: 40vw;
+    }
+    .background-two{
+        top: 20vh;
+        right: 3vw;
+    }
+    
+    .background-three{
+        top: 3vh;
+        right: 10vw;
+    }
+}
+
+@media(max-width: 1420px){
+    .background-two{
+        top: 19vh;
+        right: 3vw;
+    }
+    
+    .background-three{
+        top: 3vh;
+        right: 10vw;
+    }
+
+    .icon img{
+        width: 15vh;
+    }
+
+    .information{
+        top: 45%;
+    }
+
+    .information h2{
+        font-size: 60px;
+    }
+
+    .information p{
+        font-size: 20px;
+    }
+
+    .stat{
+        margin: 0;
+    }
+
+    .content{
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+@media(max-width: 1200px){
+    .stat{
+        margin-bottom: 200px;
+    }
+    .background-two{
+        top: 15vh;
+        right: 3vw;
+    }
+    .image img{
+        width: 15vh;
+    }
+    .content{
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}
+
+@media(max-width: 1060px){
+    .image img{
+        width: 12vh;
+    }
+    .stat{
+        height: 16vh;
+    }
+}
+
+@media(max-width: 600px){
+    .row-bottom{
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    .stat{
+        width: 60%;
+        margin: 10px;
+    }
+    .column-left{
+        width: 100%;
+        padding: 50px;
+        z-index: 2;
+    }
+    .column-right{
+        z-index: 1;
+    }
+
+    .icon img{
+        width: 8vh;
+    }
+
+    .information{
+        top: 28%;
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 10px;
+        }
+        a{
+            font-size: 10px;
+        }
+    }
+
+    .background-one{
+        img{
+            width: 80vw;
+        }
+    }
+    
+    .background-two{
+        right: 10vw;
+        img{
+            width: 65vw;
+        }
+    }
+    
+    .background-three{
+        right: 22vw;
+        top: 5vh;
+        img{
+            width: 42vw;
+        }
+    }
+
+    .content{
+        h2{
+            font-size: 15px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+}
